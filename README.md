@@ -40,4 +40,34 @@ Built using **Python**, **SQLite**, and **Tableau**, the system ingests real-tim
    Merges stock prices and news sentiment by timestamp and exports CSV for Tableau.
 
 5. **Tableau Dashboard**  
-   Visualizes price vs sentiment over time, sentiment spikes, and top headl
+   Visualizes price vs sentiment over time, sentiment spikes, and top headlines.
+
+    ---
+
+## Database Schema (SQLite)
+**stock_prices**
+| Column    | Type      |
+|-----------|-----------|
+| id        | INTEGER PK|
+| ticker    | TEXT      |
+| timestamp | DATETIME  |
+| price     | REAL      |
+| volume    | REAL      |
+
+**news_headlines**
+| Column          | Type      |
+|-----------------|-----------|
+| id              | INTEGER PK|
+| timestamp       | DATETIME  |
+| source          | TEXT      |
+| headline        | TEXT      |
+| sentiment       | REAL      |
+| sentiment_label | TEXT      |
+
+---
+
+## Getting Started
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_USERNAME/ai-stock-sentiment-dashboard.git
+cd ai-stock-sentiment-dashboard
